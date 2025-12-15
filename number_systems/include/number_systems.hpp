@@ -2,6 +2,8 @@
 #define NUMBER_SYSTEMS_H
 
 #include <string>
+#include <iostream>
+#include <cmath>
 
 namespace number_systems{
     
@@ -35,7 +37,11 @@ namespace number_systems{
          */
 	void	    setBinary(const std::string& binary_input);
 
-    
+	/**
+	 * @brief Converts a binary number to a decimal number.
+	 * @param binary_input A string representing a binary number.
+	 */
+        std::string binaryToDecimal(const std::string& binary_input) const;
     };
 }
 

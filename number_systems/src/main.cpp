@@ -12,5 +12,7 @@ int main(){
     number_systems::BinaryNumber bnumber("1");
     cout << bnumber.getBinary()  << endl;
 
+    cout << bnumber.binaryToDecimal("1000") << endl;
+
     return 0;
 }
