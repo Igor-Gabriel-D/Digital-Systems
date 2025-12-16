@@ -9,11 +9,13 @@ int main(){
 
     cout << "Hello, world!" << endl;
 
-    number_systems::BinaryNumber bnumber("10");
+    number_systems::BinaryNumber bnumber("1111");
     cout << bnumber.getBinary()  << endl;
 
     cout << number_systems::binaryToDecimal("1000") << endl;
+    
     cout << bnumber.toDecimal() << endl;
+    cout << bnumber.toHex() << endl;
 
     cout << "\n" << number_systems::binaryToHex("01011100") << endl;
     return 0;

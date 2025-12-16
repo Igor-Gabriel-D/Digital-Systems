@@ -41,6 +41,10 @@ namespace number_systems{
 	 * @brief Returns the decimal number of value
 	 * */
 	std::string toDecimal() const;
+	/*
+	 * @brief Returns the decimal number of value
+	 * */
+	std::string toHex() const;
 
     };
 

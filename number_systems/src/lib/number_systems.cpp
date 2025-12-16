@@ -12,7 +12,10 @@ namespace number_systems{
         
         return binaryToDecimal(value);
     }
-
+    std::string BinaryNumber::toHex() const{
+       
+        return binaryToHex(value);
+    }
 
     std::string binaryToDecimal(const std::string& binary_input){
 	
