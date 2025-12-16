@@ -49,6 +49,12 @@ namespace number_systems{
      * @param binary_input A string representing a binary number.
      */
     std::string binaryToDecimal(const std::string& binary_input);
+    /*
+     * @brief Converts a binary number to a hexadecimal number.
+     * @param binary_input A string representing a binary number.
+     * */
+    std::string binaryToHex    (const std::string& binary_input);
+
 }
 
 #endif

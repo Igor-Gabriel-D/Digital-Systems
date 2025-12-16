@@ -15,5 +15,6 @@ int main(){
     cout << number_systems::binaryToDecimal("1000") << endl;
     cout << bnumber.toDecimal() << endl;
 
+    cout << "\n" << number_systems::binaryToHex("01011100") << endl;
     return 0;
 }

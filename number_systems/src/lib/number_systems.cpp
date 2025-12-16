@@ -7,10 +7,12 @@ namespace number_systems{
     std::string BinaryNumber::getBinary() const { return value; }
     void BinaryNumber::setBinary(const std::string& binary_input) { value = binary_input ;} 
     
+    
     std::string BinaryNumber::toDecimal() const{
         
         return binaryToDecimal(value);
     }
+
 
     std::string binaryToDecimal(const std::string& binary_input){
 	
@@ -21,7 +23,25 @@ namespace number_systems{
 		
             res += pow(2, -i + binary_input.length() - 1) * ((int)binary_input[i] - B_ASCII);
 	}
-
         return std::to_string(res);
     }
+
+    std::string binaryToHex(const std::string& binary_input){
+        
+        std::string res = "";
+        std::string hexTable = "0123456789ABCDEF";
+	int bits_length = binary_input.length();
+        
+	for(int i = bits_length / 4; i >= 0 ; i-- ){
+	    res += hexTable[std::stoi(binaryToDecimal( 
+			  std::string(1,binary_input[(bits_length-4)-(4*i)]) +
+                          std::string(1,binary_input[(bits_length-3)-(4*i)]) + 
+			  std::string(1,binary_input[(bits_length-2)-(4*i)]) +
+                          std::string(1,binary_input[(bits_length-1)-(4*i)])  
+			  ))];
+	    
+	}
+        return res;
+    }
+
 }
