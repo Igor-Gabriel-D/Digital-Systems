@@ -6,8 +6,13 @@ namespace number_systems{
 	    
     std::string BinaryNumber::getBinary() const { return value; }
     void BinaryNumber::setBinary(const std::string& binary_input) { value = binary_input ;} 
+    
+    std::string BinaryNumber::toDecimal() const{
+        
+        return binaryToDecimal(value);
+    }
 
-    std::string BinaryNumber::binaryToDecimal(const std::string& binary_input) const {
+    std::string binaryToDecimal(const std::string& binary_input){
 	
 	int res = 0;
 	

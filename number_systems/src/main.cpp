@@ -9,10 +9,11 @@ int main(){
 
     cout << "Hello, world!" << endl;
 
-    number_systems::BinaryNumber bnumber("1");
+    number_systems::BinaryNumber bnumber("10");
     cout << bnumber.getBinary()  << endl;
 
-    cout << bnumber.binaryToDecimal("1000") << endl;
+    cout << number_systems::binaryToDecimal("1000") << endl;
+    cout << bnumber.toDecimal() << endl;
 
     return 0;
 }

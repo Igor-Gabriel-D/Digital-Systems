@@ -35,14 +35,20 @@ namespace number_systems{
          * @brief Sets a new binary value.
          * @param binary_input A string representing a binary number.
          */
-	void	    setBinary(const std::string& binary_input);
+	void setBinary(const std::string& binary_input);
+        
+	/*
+	 * @brief Returns the decimal number of value
+	 * */
+	std::string toDecimal() const;
 
-	/**
-	 * @brief Converts a binary number to a decimal number.
-	 * @param binary_input A string representing a binary number.
-	 */
-        std::string binaryToDecimal(const std::string& binary_input) const;
     };
+
+    /**
+     * @brief Converts a binary number to a decimal number.
+     * @param binary_input A string representing a binary number.
+     */
+    std::string binaryToDecimal(const std::string& binary_input);
 }
 
 #endif
