@@ -33,18 +33,26 @@ namespace number_systems{
         
         std::string res = "";
         std::string hexTable = "0123456789ABCDEF";
-	int bits_length = binary_input.length();
-        
-	for(int i = bits_length / 4; i >= 0 ; i-- ){
+	int input_length = binary_input.length();
+
+	//res += hexTable[std::stoi()]
+	if(input_length%4 != 0){
+	    res += hexTable[(std::stoi(binaryToDecimal(binary_input)) >> ( (input_length/4 ) * 4 ) )];
+	
+	}
+	for(int i = input_length / 4; i >= 0 ; i-- ){
 	    res += hexTable[std::stoi(binaryToDecimal( 
-			  std::string(1,binary_input[(bits_length-4)-(4*i)]) +
-                          std::string(1,binary_input[(bits_length-3)-(4*i)]) + 
-			  std::string(1,binary_input[(bits_length-2)-(4*i)]) +
-                          std::string(1,binary_input[(bits_length-1)-(4*i)])  
+			  std::string(1,binary_input[(input_length-4)-(4*i)]) +
+                          std::string(1,binary_input[(input_length-3)-(4*i)]) + 
+			  std::string(1,binary_input[(input_length-2)-(4*i)]) +
+                          std::string(1,binary_input[(input_length-1)-(4*i)])  
 			  ))];
 	    
 	}
+
         return res;
     }
+
+
 
 }

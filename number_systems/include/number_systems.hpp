@@ -58,7 +58,12 @@ namespace number_systems{
      * @param binary_input A string representing a binary number.
      * */
     std::string binaryToHex    (const std::string& binary_input);
-
+    /*
+     * @brief Converts a binary number to a Octal number.
+     * @param binary_input A string representing a binary number.
+     * */
+    //std::string binaryToOct    (const std::string& binary_input);
+    
 }
 
 #endif
