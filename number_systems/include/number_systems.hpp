@@ -48,6 +48,25 @@ namespace number_systems{
 
     };
 
+    class HexNumber{
+    private:
+        std::string value;
+    public:
+	/**
+	 * @brief Constructs a HexNumber object.
+	 * @param hex_input A string repressenting a hexadecimal number.
+	 * */
+	HexNumber(const std::string& hex_input);
+
+	std::string getHex() const;
+
+	void setHex(const std::string& hex_input);
+
+	std::string toDecimal() const;
+
+	std::string toBinary() const;
+    };
+
     /**
      * @brief Converts a binary number to a decimal number.
      * @param binary_input A string representing a binary number.
@@ -63,7 +82,9 @@ namespace number_systems{
      * @param binary_input A string representing a binary number.
      * */
     //std::string binaryToOct    (const std::string& binary_input);
-    
+
+    std::string hexToDecimal   (const std::string& hex_input);
+    std::string hexToBinary    (const std::string& hex_input);
 }
 
 #endif

@@ -17,8 +17,9 @@ int main(){
     cout << bnumber.toDecimal() << endl;
     cout << bnumber.toHex() << endl;
 
-    cout << "\n" << number_systems::binaryToHex("11101011100") << endl;
+    //cout << "\n" << number_systems::binaryToHex("11101011100") << endl;
     //cout << (5<<2) << endl; 
-    
+    cout << number_systems::hexToDecimal("0F") << endl;
+
     return 0;
 }

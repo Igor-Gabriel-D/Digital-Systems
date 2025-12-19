@@ -3,24 +3,17 @@
 namespace number_systems{
 
     BinaryNumber::BinaryNumber(const std::string& binary_input) : value(binary_input) {}
-	    
+    
     std::string BinaryNumber::getBinary() const { return value; }
     void BinaryNumber::setBinary(const std::string& binary_input) { value = binary_input ;} 
     
     
-    std::string BinaryNumber::toDecimal() const{
-        
-        return binaryToDecimal(value);
-    }
-    std::string BinaryNumber::toHex() const{
-       
-        return binaryToHex(value);
-    }
+    std::string BinaryNumber::toDecimal() const{ return binaryToDecimal(value); }
+    std::string BinaryNumber::toHex() const{ return binaryToHex(value); }
 
     std::string binaryToDecimal(const std::string& binary_input){
 	
-	int res = 0;
-	
+	int res = 0;	
         int B_ASCII = (int)'0';
 	for(int i = binary_input.length() - 1; i >= 0 ; i--){
 		
@@ -35,10 +28,8 @@ namespace number_systems{
         std::string hexTable = "0123456789ABCDEF";
 	int input_length = binary_input.length();
 
-	//res += hexTable[std::stoi()]
 	if(input_length%4 != 0){
 	    res += hexTable[(std::stoi(binaryToDecimal(binary_input)) >> ( (input_length/4 ) * 4 ) )];
-	
 	}
 	for(int i = input_length / 4; i >= 0 ; i-- ){
 	    res += hexTable[std::stoi(binaryToDecimal( 
@@ -49,10 +40,31 @@ namespace number_systems{
 			  ))];
 	    
 	}
-
         return res;
     }
 
+    // ================================================================================================================================
 
+    HexNumber::HexNumber(const std::string& hex_input) : value(hex_input) {}
+
+    std::string HexNumber::getHex() const {return value;}
+    void HexNumber::setHex(const std::string& hex_input)  { value = hex_input; }
+
+    std::string hexToDecimal(const std::string& hex_input){
+        int res = 0;
+        int H_ASCII[] = {(int)'0', (int)'1', (int)'2', (int)'3',
+	       		 (int)'4', (int)'5', (int)'6', (int)'7',
+			 (int)'8', (int)'9', (int)'A', (int)'B',
+			 (int)'C', (int)'D', (int)'E', (int)'F'};
+	for(int i = 0; i < 16; i++){
+	    std::cout << H_ASCII[i] << " " << std::endl;
+	}
+	
+	return "  ";
+    }
+
+    std::string hexToBinary(const std::string& hex_input){
+        return "  ";
+    }
 
 }
