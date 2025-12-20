@@ -19,7 +19,7 @@ int main(){
 
     //cout << "\n" << number_systems::binaryToHex("11101011100") << endl;
     //cout << (5<<2) << endl; 
-    cout << number_systems::hexToDecimal("0F") << endl;
+    cout << number_systems::hexToDecimal("A10") << endl;
 
     return 0;
 }

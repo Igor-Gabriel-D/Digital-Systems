@@ -52,15 +52,25 @@ namespace number_systems{
 
     std::string hexToDecimal(const std::string& hex_input){
         int res = 0;
+	int input_length = hex_input.length();
+
         int H_ASCII[] = {(int)'0', (int)'1', (int)'2', (int)'3',
 	       		 (int)'4', (int)'5', (int)'6', (int)'7',
 			 (int)'8', (int)'9', (int)'A', (int)'B',
 			 (int)'C', (int)'D', (int)'E', (int)'F'};
-	for(int i = 0; i < 16; i++){
-	    std::cout << H_ASCII[i] << " " << std::endl;
+	
+	for(int i = 0; i < input_length; i++){
+            int digit = (int)hex_input[ (input_length - 1) - i  ]; 
+	    for(int j = 0; j < 16; j++){
+		if(H_ASCII[j] == digit ){
+		    res += pow(16, i) * j;
+		    break;
+		}
+	    }
+
 	}
 	
-	return "  ";
+	return std::to_string(res);
     }
 
     std::string hexToBinary(const std::string& hex_input){
