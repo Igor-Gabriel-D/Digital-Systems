@@ -22,26 +22,28 @@ namespace number_systems{
         return std::to_string(res);
     }
 
-    std::string binaryToHex(const std::string& binary_input){
-        
-        std::string res = "";
-        std::string hexTable = "0123456789ABCDEF";
-	int input_length = binary_input.length();
+    std::string binaryToHex(std::string binary_input) {
+        std::string res;
+        const std::string hexTable = "0123456789ABCDEF";
 
-	if(input_length%4 != 0){
-	    res += hexTable[(std::stoi(binaryToDecimal(binary_input)) >> ( (input_length/4 ) * 4 ) )];
-	}
-	for(int i = input_length / 4; i >= 0 ; i-- ){
-	    res += hexTable[std::stoi(binaryToDecimal( 
-			  std::string(1,binary_input[(input_length-4)-(4*i)]) +
-                          std::string(1,binary_input[(input_length-3)-(4*i)]) + 
-			  std::string(1,binary_input[(input_length-2)-(4*i)]) +
-                          std::string(1,binary_input[(input_length-1)-(4*i)])  
-			  ))];
-	    
-	}
+        while (binary_input.length() % 4 != 0) {
+            binary_input = "0" + binary_input;
+        }
+
+        int input_length = binary_input.length();
+
+        for (int i = 0; i < input_length; i += 4) {
+            int value =
+                (binary_input[i]     - '0') << 3 |
+                (binary_input[i + 1] - '0') << 2 |
+                (binary_input[i + 2] - '0') << 1 |
+                (binary_input[i + 3] - '0');
+
+            res += hexTable[value];
+        }
         return res;
     }
+
 
     // ================================================================================================================================
 
@@ -69,9 +71,27 @@ namespace number_systems{
 	return std::to_string(res);
     }
 
-    std::string hexToBinary(const std::string& hex_input){
-        
-        return "  ";
-    }
+    /*std::string hexToBinary(const std::string& hex_input){
+	
+        std::string res = "";
+        int input_length = hex_input.length();
+
+        std::string binary_list[] = {"0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111" };
+	std::string H_STRING = "0123456789ABCDEF";
+
+	for(int i = 0; i < input_length; i++ ){
+	    char digit = hex_input[ (input_length - 1) - i  ]; 
+
+	    for(int j = 0; j < 16; j++){
+	        if( digit  ==  H_STRING[j] ){
+		    res += binary_list[j];
+		}
+	    }
+	}
+
+	return res;
+    }*/
+
+    
 
 }

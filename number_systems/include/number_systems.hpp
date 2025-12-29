@@ -76,7 +76,7 @@ namespace number_systems{
      * @brief Converts a binary number to a hexadecimal number.
      * @param binary_input A string representing a binary number.
      * */
-    std::string binaryToHex    (const std::string& binary_input);
+    std::string binaryToHex    (std::string binary_input);
     /*
      * @brief Converts a binary number to a Octal number.
      * @param binary_input A string representing a binary number.
@@ -84,7 +84,7 @@ namespace number_systems{
     //std::string binaryToOct    (const std::string& binary_input);
 
     std::string hexToDecimal   (const std::string& hex_input);
-    std::string hexToBinary    (const std::string& hex_input);
+    //std::string hexToBinary    (const std::string& hex_input);
 }
 
 #endif
