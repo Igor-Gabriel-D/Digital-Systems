@@ -71,7 +71,7 @@ namespace number_systems{
 	return std::to_string(res);
     }
 
-    /*std::string hexToBinary(const std::string& hex_input){
+    std::string hexToBinary(const std::string& hex_input){
 	
         std::string res = "";
         int input_length = hex_input.length();
@@ -90,7 +90,7 @@ namespace number_systems{
 	}
 
 	return res;
-    }*/
+    }
 
     
 

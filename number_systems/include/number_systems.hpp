@@ -84,7 +84,7 @@ namespace number_systems{
     //std::string binaryToOct    (const std::string& binary_input);
 
     std::string hexToDecimal   (const std::string& hex_input);
-    //std::string hexToBinary    (const std::string& hex_input);
+    std::string hexToBinary    (const std::string& hex_input);
 }
 
 #endif
