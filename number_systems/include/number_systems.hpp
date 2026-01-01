@@ -1,5 +1,5 @@
-#ifndef	NUMBER_SYSTEMS_H
-#define NUMBER_SYSTEMS_H
+#ifndef	NUMBER_SYSTEMS_HPP
+#define NUMBER_SYSTEMS_HPP
 
 #include <string>
 #include <iostream>
@@ -37,13 +37,13 @@ namespace number_systems{
          */
 	void setBinary(const std::string& binary_input);
         
-	/*
+	/**
 	 * @brief Returns the decimal number of value
-	 * */
+	 */
 	std::string toDecimal() const;
-	/*
+	/**
 	 * @brief Returns the hexadecimal number of value
-	 * */
+	 */
 	std::string toHex() const;
 
     };
@@ -62,7 +62,7 @@ namespace number_systems{
 	/**
 	 * @brief Constructs a HexNumber object.
 	 * @param hex_input A string repressenting a hexadecimal number.
-	 * */
+	 */
 	HexNumber(const std::string& hex_input);
 	/**
          * @brief Returns the hexadecimal representation.
@@ -71,17 +71,17 @@ namespace number_systems{
 	std::string getHex() const;
         /**
          * @brief Sets a new hexadecimal value.
-         * @param binary_input A string representing a hexadecimal number.
+         * @param hex_input A string representing a hexadecimal number.
          */
 	void setHex(const std::string& hex_input);
 	
-	/*
+	/**
 	 * @brief Returns the decimal number of value
-	 * */
+	 */
 	std::string toDecimal() const;
-	/*
+	/**
 	 * @brief Returns the binary number of value
-	 * */
+	 */
 	std::string toBinary() const;
     };
 
@@ -90,21 +90,21 @@ namespace number_systems{
      * @param binary_input A string representing a binary number.
      */
     std::string binaryToDecimal(const std::string& binary_input);
-    /*
+    /**
      * @brief Converts a binary number to a hexadecimal number.
      * @param binary_input A string representing a binary number.
-     * */
+     */
     std::string binaryToHex    (std::string binary_input);
     
-     /*
+     /**
      * @brief Converts a hexadecimal number to a decimal number.
-     * @param binary_input A string representing a hexadecimal number.
-     * */
+     * @param hex_input A string representing a hexadecimal number.
+     */
     std::string hexToDecimal   (const std::string& hex_input);
-     /*
+     /**
      * @brief Converts a hexadecimal number to a binary number.
-     * @param binary_input A string representing a hexadecimal number.
-     * */
+     * @param hex_input A string representing a hexadecimal number.
+     */
     std::string hexToBinary    (const std::string& hex_input);
 }
 
