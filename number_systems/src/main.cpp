@@ -20,5 +20,6 @@ int main(){
     cout << "\n" << number_systems::binaryToHex("1111000") << endl;
     cout << number_systems::hexToDecimal("A10") << endl;
     cout << number_systems::hexToBinary("FF") << endl;
+
     return 0;
 }
